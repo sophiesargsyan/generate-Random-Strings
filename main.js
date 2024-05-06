@@ -9,3 +9,11 @@ function* generateRandomStrings() {
         yield randomString;
     }
 }
+
+const randomStringGenerator = generateRandomStrings();
+
+
+for (let i = 0; i < 5; i++) {
+    const randomString = randomStringGenerator.next().value;
+    console.log(randomString);
+}
